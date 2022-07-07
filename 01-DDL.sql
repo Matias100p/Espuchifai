@@ -3,7 +3,7 @@ CREATE DATABASE Espochifai;
 USE Espochifai;
 
 create Table Album(
-    idAlbum TINYINT NOT NULL,
+    idAlbum int NOT NULL,
     idCancion TINYINT NOT NULL,
     nombre VARCHAR(45) NOT NULL,
     lanzamiento DATE NOT NULL,
@@ -21,9 +21,9 @@ create table Banda(
     CONSTRAINT UQ_Banda_nombre UNIQUE (nombre)
 );
 create Table Cancion(
-    idCancion TINYINT NOT NULL,
+    idCancion bigint NOT NULL,
     nombre VARCHAR(45) not NULL,
-    numero_ord INT not NULL,
+    numero_ord TINYINT unsigned not NULL,
     PRIMARY KEY (idCancion),
     CONSTRAINT UQ_Cancion_nombre UNIQUE (nombre)
     
